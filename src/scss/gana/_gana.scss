@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.gana {
+    padding: v.$separacion 0;
+
+    &__heading {
+        text-align: center;
+        color: v.$secundario;
+    }
+
+    &__grid {
+        @include m.desktop {
+            @include m.grid(2, v.$separacion);
+        }
+    }
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    &__parrafo {
+        color: v.$secundario;
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    &__boton {
+        @include m.boton(v.$primario, v.$blanco)
+    }
+    
+}
